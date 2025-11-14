@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1 - Konkurs</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/konkurs.css" />
+  </head>
+  <body>
+    <h1>Zgłoszenie do Konkursu Plastycznego</h1>
+
+    <input type="checkbox" id="darkToggle" aria-hidden="true" />
+    <label for="darkToggle" class="theme-toggle-label" title="Formularz - ciemna skórka">🌗</label>
+
+    <form action="https://httpbin.org/get" method="get" id="logonForm" novalidate>
+      <label for="name">Imię</label>
+      <input
+        type="text"
+        name="Imię"
+        id="name"
+        maxlength="30"
+        required
+        autocomplete="given-name"
+        placeholder="Wpisz imię"
+      />
+
+      <label for="surname">Nazwisko</label>
+      <input
+        type="text"
+        name="Nazwisko"
+        id="surname"
+        maxlength="50"
+        required
+        autocomplete="family-name"
+        placeholder="Wpisz nazwisko"
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="Email"
+        id="email"
+        required
+        autocomplete="email"
+        placeholder="adres@przyklad.pl"
+      />
+
+      <label for="city">Miasto</label>
+      <input
+        list="cities"
+        name="Miasto"
+        id="city"
+        placeholder="Wybór miasta z listy"
+        required
+        autocomplete="address-level2"
+      />
+      <datalist id="cities">
+        <option value="Kraków">
+        <option value="Warszawa">
+        <option value="Gdańsk">
+        <option value="Wrocław">
+        <option value="Środa Śląska">
+        <option value="Gdynia">
+        <option value="Wieliczka">
+        <option value="Toruń">
+        <option value="Łódź">
+        <option value="Katowice">
+        <option value="Płock">
+      </datalist>
+
+      <label for="dateOfBirth">Data urodzenia</label>
+      <input
+        type="date"
+        name="Data_urodzenia"
+        id="dateOfBirth"
+        required
+        max="9999-12-31"
+      />
+
+      <label for="worksCount">Liczba zgłaszanych prac</label>
+      <input
+        type="number"
+        name="Liczba_zglaszanych_prac"
+        id="worksCount"
+        required
+        min="1"
+        max="6"
+        step="1"
+        inputmode="numeric"
+        placeholder="1"
+      />
+
+      <label for="artworkMainColor">Kolor wiodący prac</label>
+      <input
+        type="color"
+        name="Kolor_wiodacy_prac"
+        id="artworkMainColor"
+        required
+        value="#000000"
+        title="Wybierz kolor"
+        aria-label="Kolor wiodący prac"
+      />
+
+      <label for="artworkType">Rodzaj pracy</label>
+      <select name="Rodzaj_pracy" id="artworkType" required>
+        <option value="" disabled selected>Wybór kategorii</option>
+        <option value="painting">Malarstwo</option>
+        <option value="photography">Fotografia</option>
+        <option value="drawing">Rysunek</option>
+      </select>
+
+      <fieldset>
+        <legend>Publikacja</legend>
+        <div class="radio-group">
+          <input type="radio" id="pub_yes" name="publikacja" value="publiczne" required />
+          <label for="pub_yes">Publiczne</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" id="pub_no" name="publikacja" value="niepubliczne" required />
+          <label for="pub_no">Niepubliczne</label>
+        </div>
+      </fieldset>
+
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          name="Zgoda_na_regulamin"
+          id="accept"
+          required
+        />
+        <label for="accept">Zgadzam się na regulamin konkursu</label>
+      </div>
+
+      <button type="submit">Wyślij</button>
+    </form>
+
+    <nav>
+      <a href="index.html">Strona główna</a>
+    </nav>
+  </body>
+</html>
