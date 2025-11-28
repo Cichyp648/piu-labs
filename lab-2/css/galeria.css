@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #b6b6b6;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background: #6a6a6a;
+    border: 3px solid #4d4d4d;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* od 1200px – dwie kolumny */
+@media (min-width: 1200px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* efekt po najechaniu */
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+figcaption {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #000000;
+    text-align: center;
+}
