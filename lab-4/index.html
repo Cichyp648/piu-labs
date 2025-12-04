@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lab 4</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4 - Kanban</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header class="page-title">
+        <h1>Kanban</h1>
+    </header>
+
+    <main class="kanban">
+
+        <section class="lane" data-lane="todo">
+            <div class="lane__top">
+                <h2 class="lane__title">Do zrobienia</h2>
+                <span class="lane__count" data-count="todo">0</span>
+            </div>
+
+            <div class="lane__actions">
+                <button class="mini-btn js-add">Dodaj</button>
+                <button class="mini-btn js-recolor">Koloruj</button>
+                <button class="mini-btn js-sort">Sortuj</button>
+            </div>
+
+            <div class="lane__cards js-lane-cards"></div>
+        </section>
+
+        <section class="lane" data-lane="doing">
+            <div class="lane__top">
+                <h2 class="lane__title">W trakcie</h2>
+                <span class="lane__count" data-count="doing">0</span>
+            </div>
+
+            <div class="lane__actions">
+                <button class="mini-btn js-add">Dodaj</button>
+                <button class="mini-btn js-recolor">Koloruj</button>
+                <button class="mini-btn js-sort">Sortuj</button>
+            </div>
+
+            <div class="lane__cards js-lane-cards"></div>
+        </section>
+
+        <section class="lane" data-lane="done">
+            <div class="lane__top">
+                <h2 class="lane__title">Zrobione</h2>
+                <span class="lane__count" data-count="done">0</span>
+            </div>
+
+            <div class="lane__actions">
+                <button class="mini-btn js-add">Dodaj</button>
+                <button class="mini-btn js-recolor">Koloruj</button>
+                <button class="mini-btn js-sort">Sortuj</button>
+            </div>
+
+            <div class="lane__cards js-lane-cards"></div>
+        </section>
+    </main>
+</body>
 </html>
